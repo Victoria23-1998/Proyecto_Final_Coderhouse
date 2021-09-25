@@ -1,7 +1,7 @@
 [       
     {
         "id":"01",
-        "image":"../img/D_NQ_NP_613874-MLA44357774154_122020-W.png",
+        "image":"./img/D_NQ_NP_613874-MLA44357774154_122020-W.png",
         "productName":"Zapatillas Jaguar Oficial",
         "price":3599,
         "talla":[35,36,37,38,39,40,41,42],
@@ -9,7 +9,7 @@
     },
     {
         "id":"02",
-        "image":"../img/D_NQ_NP_625344-MLA46808949912_072021-W - copia.png",
+        "image":"./img/D_NQ_NP_625344-MLA46808949912_072021-W - copia.png",
         "productName":"Zapatillas Atomik Nasau",
         "price":5289,
         "talla":[35,36,37,38,39,40],
@@ -17,7 +17,7 @@
     },
     {
         "id":"03",
-        "image":"../img/product03.png",
+        "image":"./img/product03.png",
         "productName":"Zapatillas Tela elastizada",
         "price":1574,
         "talla":[35,36,37,38,39,40],
@@ -25,7 +25,7 @@
    },
    {
     "id":"04",
-    "image":"../img/D_NQ_NP_653149-MLA45090083716_032021-W - copia.png",
+    "image":"./img/D_NQ_NP_653149-MLA45090083716_032021-W - copia.png",
     "productName":"Zapatillas Panchas Nauticas",
     "price":2000,
     "talla":[35,36,37,38,39,40],
@@ -33,7 +33,7 @@
    },
    {
     "id":"05",
-    "image":"../img/D_NQ_NP_661084-MLA40604586685_012020-W.png",
+    "image":"./img/D_NQ_NP_661084-MLA40604586685_012020-W.png",
     "productName":"Zapatillas Converse",
     "price":4299,
     "talla":[35,36,37,38,39,40],
@@ -41,7 +41,7 @@
    },
    {
     "id":"06",
-    "image":"../img/D_NQ_NP_665494-MLA42351035569_062020-W - copia.png",
+    "image":"./img/D_NQ_NP_665494-MLA42351035569_062020-W - copia.png",
     "productName":"Zapatillas Reforzas Trekking",
     "price":2000,
     "talla":[35,36,37,38,39,40],
@@ -49,7 +49,7 @@
    },
    {
     "id":"07",
-    "image":"../img/D_NQ_NP_673060-MLA41186638161_032020-W - copia.png",
+    "image":"./img/D_NQ_NP_673060-MLA41186638161_032020-W - copia.png",
     "productName":"Zapatillas Anatómicas",
     "price":1749,
     "talla":[35,36,37,38,39,40],
@@ -57,7 +57,7 @@
    },
    {
     "id":"08",
-    "image":"../img/D_NQ_NP_711637-MLA31116633552_062019-W - copia.png",
+    "image":"./img/D_NQ_NP_711637-MLA31116633552_062019-W - copia.png",
     "productName":"Zapatillas Ozono Skate",
     "price":2199,
     "talla":[35,36,37,38,39,40],
@@ -65,7 +65,7 @@
    },
    {
     "id":"09",
-    "image":"../img/D_NQ_NP_753883-MLA41787404474_052020-W - copia.png",
+    "image":"./img/D_NQ_NP_753883-MLA41787404474_052020-W - copia.png",
     "productName":"Zapatillas Jaguar Oficial",
     "price":2490,
     "talla":[35,36,37,38,39,40],
@@ -73,7 +73,7 @@
    },
    {
     "id":"10",
-    "image":"../img/D_NQ_NP_761636-MLA43780958441_102020-W - copia.png",
+    "image":"./img/D_NQ_NP_761636-MLA43780958441_102020-W - copia.png",
     "productName":"Zapatillas Deportivas koki",
     "price":2190,
     "talla":[35,36,37,38,39,40],
@@ -81,7 +81,7 @@
    },
    {
     "id":"11",
-    "image":"../img/D_NQ_NP_791794-MLA40163244194_122019-W - copia.png",
+    "image":"./img/D_NQ_NP_791794-MLA40163244194_122019-W - copia.png",
     "productName":"Zapatilla Mujer Star Lona",
     "price":1550,
     "talla":[35,36,37,38,39,40],
@@ -89,7 +89,7 @@
    },
    {
     "id":"12",
-    "image":"../img/D_NQ_NP_868921-MLA43876362931_102020-W - copia.png",
+    "image":"./img/D_NQ_NP_868921-MLA43876362931_102020-W - copia.png",
     "productName":"Zapatillas Topper Ultralight",
     "price":4999,
     "talla":[35,36,37,38,39,40],
@@ -97,7 +97,7 @@
    },
    {
     "id":"13",
-    "image":"../img/D_NQ_NP_883023-MLA45814509264_052021-W - copia.png",
+    "image":"./img/D_NQ_NP_883023-MLA45814509264_052021-W - copia.png",
     "productName":"Zapatillas Topper Dakota",
     "price":6499,
     "talla":[35,36,37,38,39,40],
