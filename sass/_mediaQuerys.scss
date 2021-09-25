@@ -1,0 +1,161 @@
+@media screen and (min-width:992px){
+    .d-flex{
+        background: white;
+        width: 42%;
+    }
+    #navbar2{
+        padding-right: 3rem;
+        background-color: $color2;
+        padding-left: 3rem;
+    }
+    #navbar1{
+        padding-left: 3rem;
+        
+        background:  $color2;
+       
+    }
+}
+
+@media screen and (min-width:759px){
+    .buscador{
+        margin-right: 500px;
+    }
+    #navbar2{
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 758px){
+    body{
+        font-size: 1rem;
+        overflow-x: hidden;
+    }
+    .navbar5{
+        display: flex;
+        justify-content: space-around;
+        background: $color2;
+        height: 50px;
+        padding: 0.8rem;
+        input{
+            border: none;
+           width: 100%;
+        }
+    }
+    .logo{
+        width: 30%;
+        margin-right: 1rem;
+        img{
+            width: 100%;
+        }
+    }
+    .search{
+        background: white;
+        border: none;
+        font-size: 1rem;
+        margin-right: 2rem;
+        
+        
+    }
+    .nav-toggle{
+        height:4%;
+        cursor: pointer;
+        border: none;
+        background: $color2;
+        font-size: 1.2rem;
+        margin-right: 1rem;
+    }
+    .menuResponsive{
+        display: flex;
+        flex-direction:column ;
+        height: 500px;
+        background: whitesmoke;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        top:50px;
+        justify-content: space-around;
+        position: absolute;
+        transition: 0.3s;
+        display:none;
+        z-index: 10;
+        li{
+            list-style: none;
+            margin-left: 2rem;
+          
+        }
+        a{
+            text-decoration: none;
+            color: #333;
+            cursor: pointer;
+           
+        }
+       
+    }
+    .menuResponsive.active{
+        display: flex;
+    }
+    .cart{
+        font-size: 1.3rem;
+    }
+    .navbar6{
+        width: 100%;
+        background: $color2;
+        display: flex;
+        padding-left: 1rem;
+        
+        
+        button{
+            background: $color2;
+            border: none;
+            
+        }
+        div{
+            margin-left: 5px;
+        }
+        
+    }
+    #navbar1{
+        display: none;
+    }
+    #navbar2{
+        display: none;
+    }
+    aside{
+        display: none;
+    }
+}
+@media screen and (min-width:578px) and (max-width: 757px){
+    .search{
+        width: 40px;
+        text-align: center;
+    }
+    .logo{
+        width: 21%;
+       
+    }
+    .navbar5{
+        input{
+            width: 140%;
+        }
+    }
+}
+@media screen and (max-width:578px){
+    .search{
+        width: 40px;
+        text-align: center;
+    }
+    .logo{
+        width: 20%;
+    }
+    .navbar5{
+        input{
+            width: 110%;
+        }
+    }
+    .navbar6{
+        padding-bottom: 5px;
+        button{
+            font-size: 1.2rem;
+        }
+       
+    }
+}

@@ -1,0 +1,27 @@
+.price{
+    font-size: 1.5rem;
+ }
+ .zoom{
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+    border: 2px solid -webkit-box-shadow 1px 1px 10px 2px #C9C9C9;
+    box-shadow: 1px 1px 10px 2px #C9C9C9;
+    padding: 5px;
+    display: flex;
+    align-content: center;
+    margin-left: auto;
+    
+}
+.contenedor-cards{
+    display: flex;
+        flex-wrap: wrap;
+        justify-content: stretch;
+        margin-top: 20px;
+       
+        
+}
+.card{
+    margin-top: 20px;
+    margin-left: 20px;
+}
