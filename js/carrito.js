@@ -7,7 +7,7 @@ const fragmento2= document.createDocumentFragment();
 let contCartHtml= document.querySelector("#contenedorCart");
 const contenedorCarrito=document.querySelector("#contenedorCarrito")
 const carritoLleno=document.querySelector("#miCar");
-let succeful = document.querySelector(".alert-success");
+let succeful = document.querySelector("#successCompra");
 let contenedorCompra= document.querySelector("#seccionTotal")
 let total=0;
 
@@ -23,27 +23,28 @@ document.addEventListener("DOMContentLoaded", (e)=>{
 
     let dataProducts= await getProducts();
     
+    
+
     numberItemsCar();
+    //numberItemsCar2();
     contCartHtml.querySelectorAll('*').forEach(n => n.remove());
 
     ocultarCarritoVacio();
 
     let dataCarrito = getShoppingCart();
     
-    let subTotal=0;
-
-    dataCarrito.forEach(el=>{
-      console.log(el.id)
-      //seleccionar dos productos igulaes, resolver
-      /*if(el.id == el.id){
-
-      }*/
-      let totalItem= 0;
-
-     let product=dataProducts.find(element => element.id === el.id);
-     //console.log(product)
-     
     
+    let subTotal=0;
+    
+    dataCarrito.forEach(el=>{
+      
+    
+ 
+    let totalItem= 0;
+      
+     let product=dataProducts.find(element => element.id === el.id);
+     
+     
      templateCarrito.querySelector(".imgCart").setAttribute("src", product.image);
      templateCarrito.querySelector(".tituloCart").textContent= product.productName;
      templateCarrito.querySelector(".precioCart").textContent =`$${product.price}` ;
@@ -73,10 +74,11 @@ document.addEventListener("DOMContentLoaded", (e)=>{
         OptionsCant.setAttribute("selected",'selected');
        
       }
+      
       OptionsCant.textContent = i;
       OptionsCant.value= i;
       OptionsCant.className= 'canti'
-     
+      
       cantidadCar.appendChild(OptionsCant)
       
       
@@ -98,8 +100,9 @@ document.addEventListener("DOMContentLoaded", (e)=>{
    
   }
   
+ 
   
-
+  
    contCartHtml.addEventListener("change",(e)=>{
      if(e.target.matches("#dropCantidadItem")){
       
@@ -169,6 +172,8 @@ document.addEventListener("DOMContentLoaded", (e)=>{
 const ocultarCarritoVacio=()=>{
     carritoVacio.style.display="none";
     numberItemsCar();
+    //numberItemsCar2();
+    
     
 }
 

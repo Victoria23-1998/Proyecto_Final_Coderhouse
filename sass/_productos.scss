@@ -1,82 +1,19 @@
 //modal
-.modal{
+
+.contenedorModal{
+    background-color: rgba(0,0,0,0.4);
+}
+
+/*.successDestok{
     display:none;
-    background: rgba(0,0,0,0.4);
-    width: 100%;
-    height: 100%;
-    z-index: 50;
-    justify-content: center;
-    align-items: center;
-   
-   
-}
-.cardModal1{
-   width: 600px;
-}
-.modal-container{
-   width:400px;
-   height: auto;
-   background-color: whitesmoke;
-   border-radius: 3%;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-around;
-   justify-content: center;
-   
-   padding-bottom: 10px;
-   
- 
-  
-}
-.cardDivModal{
-    margin-left: auto !important;
-    margin-right: auto !important;
-     height: auto;
-     width: 100%;
-     img{
-        width:auto;
-     }
- }
- .cModal{
-    width: 100%;
-    padding: 0px;
-}
-.btnTalla h3{
-    font-size: 1rem;
-    margin: 0;
-}
-
-.btnTalla:hover{
-    background-color: rgb(146, 144, 144);
-}
-#txtProduct{
- font-size: 1.2rem;
-}
-#txtPrice{
-    font-size: 1.2rem;
-}
-#btn3{
-    margin-left: auto;
-    top:0px;
-}
-.btn-Aceptar{
-    padding-bottom: 5.2px;
-    font-size: 1rem;
-}
-#btn2{
-    border-radius: 8%;
-    padding-bottom: 5.2px;
-    font-size: 1rem;
-}
-
-.botones{
-    margin-top: 10px;
-    height: 50px;
     
-}
-.alert{
-    display: none;
+}*/
+.alertTalla{
+    display:none;
     padding: 0px;
+}
+.successCompra{
+    display:none;
 }
 .form-select:focus{
     outline: none;
@@ -107,12 +44,20 @@
 ion-icon{
     font-size: 2rem;
 }
+
+
 .alert-success{
-    transition: 0.5s;
-    width: 400px;
-    min-height: 50px;
-  z-index: 10;
-  position:absolute;
+transition: 0.5s;
+width: 400px;
+min-height: 50px;
+z-index: 10;
+position:absolute;
  text-align: center;
  margin-left: 400px;
+display: none;
+}
+
+/* filtrado*/
+.filter{
+    display: none;
 }

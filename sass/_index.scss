@@ -8,7 +8,10 @@ footer{
    bottom: 0 !important;
    padding-top: 30px;
    overflow: hidden;
-  
+  a{
+      text-decoration: none;
+      color: whitesmoke;
+  }
  
     img{
         width: 100px;
@@ -90,3 +93,16 @@ footer{
     border-image:-webkit-linear-gradient(left,#32fcb5 0%,#28eded 12%,#2fd2ef 21%,#28c0fc 29%,#47a1ef 39%,#508fed 50%,#9160f2 63%,#c05ff4 75%,#eb6cf7 88%,#fc9b8a 100%) 1 10;
    
 }
+body {
+    background: #dedede;
+}
+.page-wrap {
+    min-height: 100vh;
+}
+.footerDestok{
+    display: none;
+}
+body{
+    overflow-x: hidden !important;
+}
+ 

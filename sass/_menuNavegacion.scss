@@ -1,8 +1,9 @@
 .number{
-    background-color: rgb(247, 67, 67);
+    background-color: rgb(163, 241, 186);
     border-radius: 50%;
     text-align: center;
 }
+
 .navbar-brand{
     margin-left: auto;
 }
@@ -21,49 +22,13 @@
 .navbar6{
     display: none;
 }
-#navbar1{
-   
-    img{
-       width: 100%;
-    }
-    
-}
+
 
 .navbar{
     background: transparent!important;
     
 }
-.d-flex{
-    width: 46.5%;
-    margin-left: 12rem;
-    outline: none;
-    -webkit-box-shadow: 0 0 5px 1px #363633;
-    box-shadow: 0 0 5px 1px #363633;
-    position: absolute;
-    
 
-    input{
-        width: 100%;
-        background-color: #f5f5f5;
-        border: none !important;
-       border-radius: 0.2rem;
-       
-       
-    }
-    input:focus, select:focus, select, input.form-control:focus {
-
-        outline:none !important;
-
-        outline-width: 0 !important;
-
-        box-shadow: none;
-
-        -moz-box-shadow: none;
-
-        -webkit-box-shadow: none;
-
-    }
-}
 .navbar-brand{
     margin-right:0 !important;
     width: 150px;
@@ -129,16 +94,52 @@
     font-size: 1.5rem;
 }
 .buscador{
-    background-color: #f5f5f5;
+    background-color: transparent;
     border: none;
     z-index: 20;
 }
-.container-fluid{
-    img{
-        margin-left: -550px;
-    }
-}
+
 .number{
     color: black;
     
+}
+
+.navFlex{
+    display: flex;
+    justify-content: space-between;
+}
+.navbar5{
+    background-color: $color2;
+}
+.navFlex2{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1.5rem;
+    padding-top: 15px;
+}
+.cartIcon{
+    position: relative;
+}
+.number2{
+    position: absolute;
+  top: 0;
+  left: 55%;
+  background: red;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 2px;
+}
+
+.form-control:focus{
+    outline: none;
+  box-shadow: none;
+}
+.btn-outline-success:focus{
+    outline: none;
+  box-shadow: none;
 }

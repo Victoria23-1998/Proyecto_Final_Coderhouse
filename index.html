@@ -14,40 +14,37 @@
     <link rel="stylesheet" href="./css/style.css">
    
 </head>
-<body>
+<body style="overflow-x: hidden;">
   <header>
     <!--Menu responsive-->
- <nav class="navbar5">
-   <div class="logo"><img src="./img/logo.png" alt=""></div>
-           <form action="">
-              
-               <div>
-                  
-                   <input class="search2" type="search">
-                  
-               </div>
-                   
-               
-           </form>
-           <div class="search" >
-               <i class="fas fa-search"></i>
-           </div>
-         
-           <button class="nav-toggle" type="button">
-               <i class="fas fa-bars"></i>
-            </button> <div class="cart">
-               <ion-icon name="cart-outline"></ion-icon>
-            </div> 
-</nav>
+
+ <div class="navbar5">
+  <nav class="navFlex2">
+   
+      <div class="contentCartIcon">
+        <a class="link" href="./pag/carrito.html" style="text-decoration: none;" >
+          <ion-icon style="color:#222831;font-size: 1.6rem;" name="cart-outline" class="cartIcon"></ion-icon>
+          <span class="number2">5</span>
+        </a>
+      </div>
+      <form class="d-flex" id="formSearch">
+        <input class="form-control me-2 " id="search1" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success " id="btnSearch2" type="submit">Search</button>
+      </form>
+      <button class="nav-toggle" type="button">
+        <i class="fas fa-bars"></i>
+      </button> 
+  </nav>
+</div>  
 <ul class="menuResponsive" >
                
    <li>
-       <a href="#"><ion-icon name="home-outline"></ion-icon><span> Inicio</span></a>
+       <a href="./pag/paginaError.html"><ion-icon name="home-outline"></ion-icon><span> Inicio</span></a>
    </li>
   
    <li>
       
-       <a href="#">
+       <a href="./pag/paginaError.html">
            <ion-icon name="notifications-outline" style="padding-right:5px;"></ion-icon>
        <span>Notificaciones</span>
    </a>
@@ -55,51 +52,45 @@
    
    <li>
        
-       <a href="#"><ion-icon name="bag-outline" style="padding-right:5px;"></ion-icon>Mis compras</a>
+       <a href="./pag/paginaError.html"><ion-icon name="bag-outline" style="padding-right:5px;"></ion-icon>Mis compras</a>
    </li>
       
    <li>
       
-       <a href="#"><ion-icon name="heart-outline" style="padding-right:5px;"></ion-icon>Favoritos</a>
+       <a href="./pag/paginaError.html"><ion-icon name="heart-outline" style="padding-right:5px;"></ion-icon>Favoritos</a>
    </li>
      
    <li>
-     <a href="#"><ion-icon name="person-circle-outline" style="padding-right:5px;"></ion-icon>Mi cuenta</a>
+     <a href="./pag/paginaError.html"><ion-icon name="person-circle-outline" style="padding-right:5px;"></ion-icon>Mi cuenta</a>
    </li>
      
    <li>
        
-       <a href="#"><ion-icon name="pricetag-outline" style="padding-right:5px;"></ion-icon>Ofertas</a>
+       <a href="./pag/paginaError.html"><ion-icon name="pricetag-outline" style="padding-right:5px;"></ion-icon>Ofertas</a>
    </li>
        
    <li>
-      <a href="#"><ion-icon name="timer-outline" style="padding-right:5px;"></ion-icon>Historial</a>
+      <a href="./pag/paginaError.html"><ion-icon name="timer-outline" style="padding-right:5px;"></ion-icon>Historial</a>
    </li>
     
    
 </ul>
-<section class="navbar6">
-<button><ion-icon name="location-outline"></ion-icon></button>
-<div>Enviar a victoria Juncal 1675</div>
-</section> 
+
 <!--Menú de navegación Destok--> 
 <div id="navbar1">
-<nav class="navbar navbar-light bg-light">
-<div class="container-fluid">
- <a class="navbar-brand" href="./index.html"><img src="./img/logo.png" alt=""></a>
- <form class="d-flex">
-   <form class="d-flex">
-       <input class="form-control me-2" type="search"  placeholder="Search" aria-label="Search">
-       
-     </form>    
-     <button class="buscador"><i class="fas fa-search"></i></button>
-       
-   </div>
-</nav>
-</div>
+  
+  <nav class="navFlex">
+    <div class="logo2">
+      <img src="./img/logo.png" alt="">
+    </div>
+    <form class="d-flex" id="formSearch2">
+      <input class="form-control me-2" id="search1" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" id="btnSearch1" type="submit">Search</button>
+    </form>
+  </nav>
 <div id="navbar2">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-   <div class="container-fluid">
+  
        <div class="map">
        <ion-icon name="location-outline"></ion-icon>
    </div>
@@ -114,15 +105,15 @@
              Hombre
            </a>
            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-             <li><a class="dropdown-item" href="#">Zapatillas</a></li>
-             <li><a class="dropdown-item" href="#">Remeras</a></li>
-             <li><a class="dropdown-item" href="#">Shorts</a></li>
-             <li><a class="dropdown-item" href="#">Musculosas</a></li>
-             <li><a class="dropdown-item" href="#">Buzos</a></li>
-             <li><a class="dropdown-item" href="#">Pantalones</a></li>
-             <li><a class="dropdown-item" href="#">Camperas</a></li>
-             <li><a class="dropdown-item" href="#">Calzas</a></li>
-             <li><a class="dropdown-item" href="#">Accesorios</a></li>
+             <li><a class="dropdown-item" href="./index.html">Zapatillas</a></li>
+             <li><a class="dropdown-item" href="./pag/paginaError.html">Remeras</a></li>
+             <li><a class="dropdown-item" href="./pag/paginaError.html">Shorts</a></li>
+             <li><a class="dropdown-item" href="./pag/paginaError.html">Musculosas</a></li>
+             <li><a class="dropdown-item" href="./pag/paginaError.html">Buzos</a></li>
+             <li><a class="dropdown-item" href="./pag/paginaError.html">Pantalones</a></li>
+             <li><a class="dropdown-item" href="./pag/paginaError.html">Camperas</a></li>
+             <li><a class="dropdown-item" href="./pag/paginaError.html">Calzas</a></li>
+             <li><a class="dropdown-item" href="./pag/paginaError.html">Accesorios</a></li>
            
            </ul>
          </li>
@@ -131,34 +122,34 @@
              Mujer
            </a>
            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-             <li><a class="dropdown-item" href="#">Zapatillas</a></li>
-             <li><a class="dropdown-item" href="#">Remeras</a></li>
-             <li><a class="dropdown-item" href="#">Shorts</a></li>
-             <li><a class="dropdown-item" href="#">Musculosas</a></li>
-             <li><a class="dropdown-item" href="#">Buzos</a></li>
-             <li><a class="dropdown-item" href="#">Pantalones</a></li>
-             <li><a class="dropdown-item" href="#">Camperas</a></li>
-             <li><a class="dropdown-item" href="#">Calzas</a></li>
-             <li><a class="dropdown-item" href="#">Accesorios</a></li>
+             <li><a class="dropdown-item" href="./index.html">Zapatillas</a></li>
+             <li><a class="dropdown-item" href="./pag/paginaError.html">Remeras</a></li>
+             <li><a class="dropdown-item" href="./pag/paginaError.html">Shorts</a></li>
+             <li><a class="dropdown-item" href="./pag/paginaError.html">Musculosas</a></li>
+             <li><a class="dropdown-item" href="./pag/paginaError.html">Buzos</a></li>
+             <li><a class="dropdown-item" href="./pag/paginaError.html">Pantalones</a></li>
+             <li><a class="dropdown-item" href="./pag/paginaError.html">Camperas</a></li>
+             <li><a class="dropdown-item" href="./pag/paginaError.html">Calzas</a></li>
+             <li><a class="dropdown-item" href="./pag/paginaError.html">Accesorios</a></li>
            
            </ul>
          </li>
          <li class="nav-item">
-           <a class="nav-link" href="./pag/productos.html">Zapatillas</a>
+           <a class="nav-link" href="./index.html">Zapatillas</a>
          </li>
          <li class="nav-item dropdown">
            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
              Marcas
            </a>
            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-             <li><a class="dropdown-item" href="#">Adidas</a></li>
-             <li><a class="dropdown-item" href="#">Fila</a></li>
-             <li><a class="dropdown-item" href="#">Puma</a></li>
-             <li><a class="dropdown-item" href="#">Nike</a></li>
-             <li><a class="dropdown-item" href="#">Vans</a></li>
-             <li><a class="dropdown-item" href="#">Converse</a></li>
-             <li><a class="dropdown-item" href="#">Reebok</a></li>
-             <li><a class="dropdown-item" href="#">Otras Marcas</a></li>
+             <li><a class="dropdown-item" href="./pag/paginaError.html">Adidas</a></li>
+             <li><a class="dropdown-item" href="./pag/paginaError.html">Fila</a></li>
+             <li><a class="dropdown-item" href="./pag/paginaError.html">Puma</a></li>
+             <li><a class="dropdown-item" href="./pag/paginaError.html">Nike</a></li>
+             <li><a class="dropdown-item" href="./pag/paginaError.html">Vans</a></li>
+             <li><a class="dropdown-item" href="./pag/paginaError.html">Converse</a></li>
+             <li><a class="dropdown-item" href="./pag/paginaError.html">Reebok</a></li>
+             <li><a class="dropdown-item" href="./pag/paginaError.html">Otras Marcas</a></li>
            
            </ul>
          </li>
@@ -175,17 +166,17 @@
              <span>Usuario</span>
            </a>
            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-             <li><a class="dropdown-item" href="#">Iniciar Sesion</a></li>
+             <li><a class="dropdown-item" href="./pag/paginaError.html">Iniciar Sesion</a></li>
              
              
            </ul>
          </li>
          
            <li class="nav-item">
-             <a class="nav-link" href="#">Mis compras</a>
+             <a class="nav-link" href="./pag/paginaError.html">Mis compras</a>
            </li>
            <li class="nav-item">
-             <a class="nav-link" href="#">Favoritos</a>
+             <a class="nav-link" href="./pag/paginaError.html">Favoritos</a>
            </li>
            <li class="nav-item">
              <i class="far fa-bell"></i>
@@ -202,68 +193,63 @@
 
 </header>
 <main>
- <div class="alert alert-success" role="alert">
+ <!--<div class="alert alert-success successDestok" role="alert">
    Agregado al carrito
- </div>
-   <div class="contenedor-cards" id="items"></div>
-
-   
-
-   <div id="modals">
-     <div class="modal close-modal" id="modal-add">
-       <div class="modal-container">
-         <div class="close-modal" id="btn3"><ion-icon name="close-outline" class="close-modal"></ion-icon></div>
-         <h2 style="margin-left: 40px;">Agregar al carrito</h2>
-         <div class="cardDiv cModal">
-           <div class="card  cardDivModal " style="width: 20rem;">
-             <img id="imgProd" src="" class="card-img-top" alt="...">
-             <div class="card-body ">
-               <p class="card-text cardModal1 ">
-                 <h4 id="txtProduct"></h4> 
-                 <h3 id="txtPrice"></h3>
-                 <div id="tallas">
-                  
-                 </div>
-                 <div class="alert alert-danger alertTalla" role="alert">
-                  Por favor elige una talla
-                 </div>
-                 <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="dropCantidad" style="width: 60px" >
-                   <option selected id="slectded"></option>
-                  
-                 </select>
-                 <!--  <select name="cantidad" id="dropCantidad" class="cant1" value="1">
-                     
-                     
-                   </select>
-                  <span>Cantidad</span>-->
-                 
-               </p>
-         </div>
-         </div>
-         </div>
-         <div class="botones" style="margin-left: 40px;">
-
-          <button class="btn-primary btn-Aceptar" type="submit" style="border-radius: 8%;" id="btn1">Aceptar</button>
-           <button type="button" class="btn-secondary close-modal2" id="btn2" >Cancelar</button>
-          </div>
-       </div>
+ </div>-->
  
-     </div>
-     
-   </div>
-   
+ 
+ <div class="alert alert-success" role="alert" id="successCart">
+  Agregado al carrito
+</div>
+   <div class="contenedor-cards" id="items"></div>
+   <div id="resultado"></div>
+
+   <div class="modal contenedorModal close-modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Agregar al carrito</h5>
+          <button type="button" class="btn-close close-modal" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="card cardModal" style="max-width: 80% !important; margin-left: auto;margin-right: auto;">
+            <img src="" class="card-img-top imgModal" alt="..." id="imgProd">
+            <div class="card-body bodyModal">
+              <h4 id="txtProduct"></h4> 
+              <h3 id="txtPrice"></h3>
+              <div id="tallas"></div>
+              <div class="alert alert-danger alertTalla" role="alert">
+                Por favor elige una talla
+               </div>
+               <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="dropCantidad" style="width: 60px" >
+                <option selected id="slectded"></option>
+               
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary close-modal" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary btn-Aceptar">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
 
 </main>
 
 
 
 <template id="template-card">
-   <div class="card" style="width: 18rem;">
+   <div class="card cc" style="width: 18rem;">
        <img src="" class="card-img-top" alt="">
        <div class="card-body">
-       <button class="zoom boton-n btn-zoom btnz"><ion-icon class="btn-zoom" name="resize-outline"></ion-icon></button>
+      
          <h3></h3>
-         <p class="price"></p>
+         <p class="price"></p> 
+         <button class="zoom boton-n btn-zoom btnz"><ion-icon class="btn-zoom" name="resize-outline"></ion-icon></button>
        </div>
      </div>
 </template>
@@ -276,11 +262,11 @@
    </div>
  <section class="conten1">
    <ul>
-     <li>Mi cuenta</li>
-     <li>Historial</li>
-     <li>Favoritos</li>
-     <li>Categorías</li>
-     <li>Ayuda</li>
+    <a href="./pag/paginaError.html"><li>Mi cuenta</li></a> 
+    <a href="./pag/paginaError.html"><li>Historial</li></a>
+     <a href="./pag/paginaError.html"><li>Favoritos</li></a>
+     <a href="./pag/paginaError.html"><li>Ayuda</li></a>
+     
    </ul>
  </section>
  <section class="conten2">
@@ -307,6 +293,46 @@
   
  </div>
 </footer>
+<footer class="footerMobile">
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Mi cuenta
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <a href="./pag/paginaError.html"><article>Mi cuenta</article></a> 
+          <a href="./pag/paginaError.html"><article>Historial</article></a>
+          <a href="./pag/paginaError.html"><article>Favoritos</article></a>
+          <a href="./pag/paginaError.html"><article>Ayuda</article></a>
+      
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Atención al cliente
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <li>Atencion al cliente</li>
+          <li>0810-0999-333</li>
+          <li> Lunes a Viernes de 9 a 18 hs</li>
+          <li>Sábado de 9 a 17 hs</li>
+        </div>
+      </div>
+    </div>
+    <div class="conten4"> 
+      <p>Términos y condiciones Cómo cuidadmos tu información privacidad infomracion al 
+        usuario financiero defensa del consumidor empresa perteneciente al grupo DABRA S.A. con domicilio en Autopista Panamericana KM 25,6 - Don Torcuato de la Provincia de Buenos Aires – Argentina.</p>
+     
+    </div>
+  </div>
+</footer>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
@@ -314,12 +340,15 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 <!--<script src="./js/main.js"></script>-->
+
 <script src="./js/datosProductos.js"></script>
+<script src="./js/buscador.js"></script>
 <script src="./js/main.js"></script>
 <script src="./js/render_items.js"></script>
 <script src="./js/renderModal.js"></script>
 <script src="./js/contarCarrito.js"></script>
 <script src="./js/datosCarrito.js"></script>
+<script src="./js/menu.js"></script>
 
 
    

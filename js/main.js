@@ -3,10 +3,11 @@
 
 document.addEventListener("DOMContentLoaded",()=>{
     
-    renderCards();
+   renderCards()
     eventosCard();
     eventosModal();
     numberItemsCar();
+    //numberItemsCar2();
    
 })
 
@@ -43,7 +44,7 @@ productos.push (new Ropa(2, "Remera Nike", 5000,"ropa"));
 productos.push (new Zapatillas(1, "Zapatilla Adidas", 3500,"zapatilla"));
 
 
-console.log(productos);
+//console.log(productos);
 
 
 const EncontrarProducto =(tipo)=>{

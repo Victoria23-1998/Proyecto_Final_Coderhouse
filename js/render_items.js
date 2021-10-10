@@ -4,19 +4,7 @@ const items= d.getElementById("items");
 //uso fragment como buena practica para tener mejor rendimiento
 const Fragmento1 = d.createDocumentFragment();
 const templateCards= document.getElementById("template-card").content;
-const modalStyle = document.querySelector(".modal");
-const contenedorModal = document.getElementById("modals");
-const alert= document.querySelector(".alertTalla");
-let succeful = document.querySelector(".alert-success");
-let animacionModal= document.querySelector(".modal-container");
-let tallaSel = null;
-let fondoTalla = 'BLANCO';
-
-let cantidadSel= '1';
-
-
-
-
+const inputSearch = document.querySelector("#search1");
 
 const renderCards =async () =>{
 
@@ -29,16 +17,17 @@ const renderCards =async () =>{
         templateCards.querySelector("p").textContent = mostrarNumFormat(product.price);
         templateCards.querySelector("ion-icon").setAttribute("id", product.id);
         templateCards.querySelector('.btnz').setAttribute("id", product.id);
-       
+        
         // se hace un clone para poder utilizar el template mas de una vez
         let clone = templateCards.cloneNode(true)
         Fragmento1.appendChild(clone)
-
+     
+       
     })
-
+    
     items.appendChild(Fragmento1)
-
-   
+    let cards = items.querySelectorAll(".cc")
+    filtrar(cards)
    
     
 }
@@ -70,3 +59,5 @@ const eventosCard=async ()=>{
 const mostrarNumFormat= (valor) =>{
     return new Intl.NumberFormat("es-AR", {style: "currency", currency: "ARS"}).format(valor);
 }
+
+
