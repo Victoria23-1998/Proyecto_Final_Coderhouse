@@ -6,6 +6,7 @@ let animacionModal= document.querySelector(".modal-content");
 
 let tallaSel = null;
 let cantidadSel= '1';
+
 const contenedorModal = document.querySelector(".contenedorModal");
 const pintarModal= (producto) =>{
   let nombre= document.getElementById("txtProduct");
@@ -44,7 +45,7 @@ const pintarModal= (producto) =>{
   for(let i=1; i <= producto.cantidadVenta; i++ ){
        
         let OptionsCant= document.createElement('option');
-
+        
         OptionsCant.textContent = i;
         OptionsCant.value= i
         OptionsCant.className= 'cant'

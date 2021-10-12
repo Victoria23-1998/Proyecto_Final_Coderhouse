@@ -225,20 +225,59 @@
 
         </div>
 
-        <div id="seccionTotal">
-            <div class="cuotas">
-                <h3>Calcula el costo de cuotas</h3>
-                <h4>aqui iria un formulario para calcular las cuotas</h4>
+      <div id="seccionTotal">
+          <div id="cuotas">
+               <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary cuotas" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                 Ver cuotas
+              </button>
+
+                <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+          <div class="modal-content close">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Cuotas</h5>
+              <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+          <div class="modal-body modalCuota">
+            <select class="form-select" aria-label="Default select example" id="banco">
+              <option selected>Elegí tu Banco</option>
+           
+            </select>
+            <select class="form-select" aria-label="Default select example" id="tarjeta">
+              <option selected>Elegí tu Tarjeta</option>
+            
+            </select>
+            <select class="form-select" aria-label="Default select example" id="cantCuotas">
+              <option selected>Elegí la cantidad de cuotas</option>
+            
+            </select>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary close" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary calculo">Calcular</button>
+      </div>
+    </div>
+  </div>
+</div>
             </div>
             <div class="textoPrecio">
                 <div class="flexTexto">
                     <h3 class="sub">Subtotal</h3>
-                    <h3 id="subtotalCompra" class="precioSub">$300</h3>
+                    <div>
+                      <span>$....</span>
+                      <h3 id="subtotalCompra" class="precioSub"> </h3>
+                  </div>
                  </div>
                 <hr>
             <div class="flexTexto">
                 <h3 class="tot">Total</h3>
-                <h3  id="totalCompra" class="totalPrecio">$300</h3>
+              <div>
+                <span>$......</span>
+                <h3  id="totalCompra" class="totalPrecio"></h3>
+              </div>
             </div>
             <button type="button" class="btn btn-dark comprar">Comprar</button>
             </div>
@@ -248,16 +287,17 @@
 
     
 <template id="carrito">
-    <div class="padre">
+  
         <section id="cardsCarrito">
-            
+        
          <img src="" class="card-img-top imgCart" alt="...">
+        
          <div id="cardCarrito">
            <h4 class="tituloCart"></h4> 
            <h2 class="precioCart"></h2>
            <h7 class="talla"></h7>
          </div>  
-            
+      <div class="flexForm"> 
          <form action="">
            <select name="cantidad" id="dropCantidadItem">
             <option value="" class="canti"></option>
@@ -271,25 +311,24 @@
           <div id="eliminar"  class="remove eliminar"><ion-icon name="trash-outline" class="remove delete"></ion-icon></div>
 
          </div>
+        </div> 
         </section>
     </div>
-</div>
-    </template>
+  
+</template>
     </main>
-<footer>    
-    <div class="foo1">
+    <footer class="footerDestok">
+      <div class="foo1">
         <div class="app">
           <img src="../img/logo.png" alt="">
           
         </div>
       <section class="conten1">
         <ul>
-         <a href="../pag/paginaError.html"><li>Mi cuenta</li></a> 
-         <a href="../pag/paginaError.html"><li>Historial</li></a>
-          <a href="../pag/paginaError.html"><li>Favoritos</li></a>
-          <a href="../pag/paginaError.html"><li>Ayuda</li></a>
-          
-          
+         <a href="./pag/paginaError.html"><li>Mi cuenta</li></a> 
+         <a href="./pag/paginaError.html"><li>Historial</li></a>
+          <a href="./pag/paginaError.html"><li>Favoritos</li></a>
+          <a href="./pag/paginaError.html"><li>Ayuda</li></a>
           
         </ul>
       </section>
@@ -316,7 +355,47 @@
           usuario financiero defensa del consumidor empresa perteneciente al grupo DABRA S.A. con domicilio en Autopista Panamericana KM 25,6 - Don Torcuato de la Provincia de Buenos Aires – Argentina.</p>
        
       </div>
-</footer>
+     </footer>
+     <footer class="footerMobile">
+       <div class="accordion" id="accordionExample">
+         <div class="accordion-item">
+           <h2 class="accordion-header" id="headingOne">
+             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+               Mi cuenta
+             </button>
+           </h2>
+           <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+             <div class="accordion-body">
+               <a href="./pag/paginaError.html"><article>Mi cuenta</article></a> 
+               <a href="./pag/paginaError.html"><article>Historial</article></a>
+               <a href="./pag/paginaError.html"><article>Favoritos</article></a>
+               <a href="./pag/paginaError.html"><article>Ayuda</article></a>
+           
+             </div>
+           </div>
+         </div>
+         <div class="accordion-item">
+           <h2 class="accordion-header" id="headingTwo">
+             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+               Atención al cliente
+             </button>
+           </h2>
+           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+             <div class="accordion-body">
+               <li>Atencion al cliente</li>
+               <li>0810-0999-333</li>
+               <li> Lunes a Viernes de 9 a 18 hs</li>
+               <li>Sábado de 9 a 17 hs</li>
+             </div>
+           </div>
+         </div>
+         <div class="conten4"> 
+           <p>Términos y condiciones Cómo cuidadmos tu información privacidad infomracion al 
+             usuario financiero defensa del consumidor empresa perteneciente al grupo DABRA S.A. con domicilio en Autopista Panamericana KM 25,6 - Don Torcuato de la Provincia de Buenos Aires – Argentina.</p>
+          
+         </div>
+       </div>
+     </footer>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     
@@ -328,7 +407,7 @@
     <script src="../js/contarCarrito.js"></script>
     <script src="../js/carrito.js"></script>
     <script src="../js/menu.js"></script>
-    <!--<script src="../js/main.js"></script>-->
+    <script src="../js/cuotas.js"></script>
  
  
 

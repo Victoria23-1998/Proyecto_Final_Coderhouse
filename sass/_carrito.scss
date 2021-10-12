@@ -66,9 +66,11 @@
 }
 .talla{
     font-size: 1rem;
+   
 }
 #dropCantidadItem{
     font-size: 1.2rem;
+    margin-right: 15px;
 }
 .precioT{
     font-weight: bold;
@@ -104,7 +106,7 @@
     background-color: rgba(236, 236, 236, 0.603);
     padding: 10px;
     border-radius: 5px 5px 5px 5px;
-    height:350px;
+    height:300px;
 }
 .btn-dark{
     margin-top: 40px;
@@ -126,4 +128,22 @@
         font-weight: bold;
     }
     
+}
+.flexForm{
+    display: flex;
+
+}
+#cardsCarrito{
+    background-color: white;
+    img{
+        height: 100px;
+        width: auto;
+        display: block;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
+.cuotas{
+    width: 100%;
+    margin-bottom: 20px;
 }

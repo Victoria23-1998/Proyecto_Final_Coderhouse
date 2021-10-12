@@ -17,13 +17,7 @@
         padding-right: 3rem;
        
     }
-    .footerDestok{
-        display: flex;
-       a{
-            text-decoration: none;
-            color: whitesmoke;
-        }
-    }
+   
     .footerMobile{
         display: none;
     }
@@ -280,5 +274,69 @@
     margin-left: 35px;
     margin-top: 2px;
 }
+/*carrito*/
+#contenedorCarrito{
+    
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+   grid-template-areas: "a1"
 
+    
+}
+#cardsCarrito{
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0px;
+   width: 90%;
+   margin-left: auto;
+   margin-right: auto;
+   background-color: white;
+   padding-left:10px ;
+   padding-right:10px ;
+    img{
+        width:100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    h3{
+        font-size: 1rem;
+    }
+   
+   h4{
+    font-weight: bold;
+   }
+
+}
+#dropCantidadItem{
+    margin-left:0px;
+    margin-right: 60px;
+    margin-top: 10px;
+}
+.remove{
+    margin-top: 0px;
+    margin-left:45px;
+   width: 30px;
+}
+.titulo{
+   margin-left: 0.9375rem;
+}
+.footerDestok{
+    display: none;
+}
+.accordion-body{
+    article{
+        color: black;
+    }
+    li{
+        color: black; 
+        list-style: none;
+    }
+}
+.card{
+    margin-left: auto;
+    margin-right: auto;
+}
+#seccionTotal{
+    margin-bottom: 30px;
+}
 }

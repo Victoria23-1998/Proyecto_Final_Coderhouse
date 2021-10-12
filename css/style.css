@@ -3,18 +3,19 @@
   list-style: none;
   text-decoration: none; }
 
-footer {
+.footerDestok {
   background: #222831;
   width: 100%;
   color: whitesmoke;
   position: relative;
   bottom: 0 !important;
   padding-top: 30px;
-  overflow: hidden; }
-  footer a {
+  overflow: hidden;
+  margin-top: 40px; }
+  .footerDestok a {
     text-decoration: none;
     color: whitesmoke; }
-  footer img {
+  .footerDestok img {
     width: 100px; }
 
 .app {
@@ -83,9 +84,6 @@ body {
 
 .page-wrap {
   min-height: 100vh; }
-
-.footerDestok {
-  display: none; }
 
 body {
   overflow-x: hidden !important; }
@@ -198,7 +196,8 @@ ion-icon {
   font-size: 1rem; }
 
 #dropCantidadItem {
-  font-size: 1.2rem; }
+  font-size: 1.2rem;
+  margin-right: 15px; }
 
 .precioT {
   font-weight: bold; }
@@ -228,7 +227,7 @@ ion-icon {
   background-color: rgba(236, 236, 236, 0.603);
   padding: 10px;
   border-radius: 5px 5px 5px 5px;
-  height: 350px; }
+  height: 300px; }
 
 .btn-dark {
   margin-top: 40px;
@@ -243,6 +242,22 @@ ion-icon {
 
 .number2 h3 {
   font-weight: bold; }
+
+.flexForm {
+  display: flex; }
+
+#cardsCarrito {
+  background-color: white; }
+  #cardsCarrito img {
+    height: 100px;
+    width: auto;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto; }
+
+.cuotas {
+  width: 100%;
+  margin-bottom: 20px; }
 
 .conten1 ul, .conten2 ul, .conten3 ul {
   list-style: none;
@@ -389,6 +404,12 @@ ion-icon {
 .card {
   margin-top: 20px;
   margin-left: 20px; }
+  .card img {
+    height: auto;
+    width: 100%; }
+
+.imagenCard {
+  width: 100%; }
 
 @media screen and (min-width: 992px) {
   .d-flex {
@@ -399,11 +420,6 @@ ion-icon {
     background: #9896F1;
     padding-left: 3rem;
     padding-right: 3rem; }
-  .footerDestok {
-    display: flex; }
-    .footerDestok a {
-      text-decoration: none;
-      color: whitesmoke; }
   .footerMobile {
     display: none; }
   .logo2 {
@@ -565,7 +581,52 @@ ion-icon {
   .number2 {
     left: 0px;
     margin-left: 35px;
-    margin-top: 2px; } }
+    margin-top: 2px; }
+  /*carrito*/
+  #contenedorCarrito {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "a1"; }
+  #cardsCarrito {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px; }
+    #cardsCarrito img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px; }
+    #cardsCarrito h3 {
+      font-size: 1rem; }
+    #cardsCarrito h4 {
+      font-weight: bold; }
+  #dropCantidadItem {
+    margin-left: 0px;
+    margin-right: 60px;
+    margin-top: 10px; }
+  .remove {
+    margin-top: 0px;
+    margin-left: 45px;
+    width: 30px; }
+  .titulo {
+    margin-left: 0.9375rem; }
+  .footerDestok {
+    display: none; }
+  .accordion-body article {
+    color: black; }
+  .accordion-body li {
+    color: black;
+    list-style: none; }
+  .card {
+    margin-left: auto;
+    margin-right: auto; }
+  #seccionTotal {
+    margin-bottom: 30px; } }
 
 * {
   padding: 0;

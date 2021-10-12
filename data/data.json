@@ -5,7 +5,10 @@
         "productName":"Zapatillas Jaguar Oficial",
         "price":3599,
         "talla":[35,36,37,38,39,40,41,42],
-        "cantidadVenta": 3
+        "cantidadVenta": 3,
+        "categoria":"zapatilla",
+        "genero":"hombre"
+        
     },
     {
         "id":"02",
@@ -13,7 +16,9 @@
         "productName":"Zapatillas Atomik Nasau",
         "price":5289,
         "talla":[35,36,37,38,39,40],
-        "cantidadVenta": 4
+        "cantidadVenta": 4,
+        "categoria":"zapatilla",
+        "genero":"mujer"
     },
     {
         "id":"03",
@@ -21,7 +26,9 @@
         "productName":"Zapatillas Tela elastizada",
         "price":1574,
         "talla":[35,36,37,38,39,40],
-        "cantidadVenta": 4
+        "cantidadVenta": 4,
+        "categoria":"zapatilla",
+        "genero":"mujer"
    },
    {
     "id":"04",
@@ -29,7 +36,9 @@
     "productName":"Zapatillas Panchas Nauticas",
     "price":2000,
     "talla":[35,36,37,38,39,40],
-    "cantidadVenta": 4
+    "cantidadVenta": 4,
+    "categoria":"zapatilla",
+    "genero":"hombre"
    },
    {
     "id":"05",
@@ -37,7 +46,9 @@
     "productName":"Zapatillas Converse",
     "price":4299,
     "talla":[35,36,37,38,39,40],
-    "cantidadVenta": 4
+    "cantidadVenta": 4,
+    "categoria":"zapatilla",
+    "genero":"hombre"
    },
    {
     "id":"06",
@@ -45,7 +56,9 @@
     "productName":"Zapatillas Reforzas Trekking",
     "price":2000,
     "talla":[35,36,37,38,39,40],
-    "cantidadVenta": 5
+    "cantidadVenta": 5,
+    "categoria":"zapatilla",
+    "genero":"hombre"
    },
    {
     "id":"07",
@@ -53,7 +66,9 @@
     "productName":"Zapatillas Anatómicas",
     "price":1749,
     "talla":[35,36,37,38,39,40],
-    "cantidadVenta": 3
+    "cantidadVenta": 3,
+    "categoria":"zapatilla",
+    "genero":"hombre"
    },
    {
     "id":"08",
@@ -61,7 +76,9 @@
     "productName":"Zapatillas Ozono Skate",
     "price":2199,
     "talla":[35,36,37,38,39,40],
-    "cantidadVenta": 4
+    "cantidadVenta": 4,
+    "categoria":"zapatilla",
+    "genero":"hombre"
    },
    {
     "id":"09",
@@ -69,7 +86,9 @@
     "productName":"Zapatillas Jaguar Oficial",
     "price":2490,
     "talla":[35,36,37,38,39,40],
-    "cantidadVenta": 4
+    "cantidadVenta": 4,
+    "categoria":"zapatilla",
+    "genero":"hombre"
    },
    {
     "id":"10",
@@ -77,7 +96,9 @@
     "productName":"Zapatillas Deportivas koki",
     "price":2190,
     "talla":[35,36,37,38,39,40],
-    "cantidadVenta": 3
+    "cantidadVenta": 3,
+    "categoria":"zapatilla",
+    "genero":"hombre"
    },
    {
     "id":"11",
@@ -85,7 +106,9 @@
     "productName":"Zapatilla Mujer Star Lona",
     "price":1550,
     "talla":[35,36,37,38,39,40],
-    "cantidadVenta": 4
+    "cantidadVenta": 4,
+    "categoria":"zapatilla",
+    "genero":"hombre"
    },
    {
     "id":"12",
@@ -93,15 +116,280 @@
     "productName":"Zapatillas Topper Ultralight",
     "price":4999,
     "talla":[35,36,37,38,39,40],
-    "cantidadVenta": 4
+    "cantidadVenta": 4,
+    "categoria":"zapatilla",
+    "genero":"hombre"
    },
    {
     "id":"13",
-    "image":"../img/D_NQ_NP_883023-MLA45814509264_052021-W - copia.png",
+    "image":"../img/zapatilla13.jpg",
     "productName":"Zapatillas Topper Dakota",
     "price":6499,
     "talla":[35,36,37,38,39,40],
-    "cantidadVenta": 4
+    "cantidadVenta": 4,
+    "categoria":"zapatilla",
+    "genero":"hombre"
+   },
+   {
+    "id":"14",
+    "image":"../img/remera14.jpg",
+    "productName":"Remera Fit Running",
+    "price":900,
+    "talla":["S","M","L","XL"],
+    "cantidadVenta": 4,
+    "categoria":"remera",
+    "genero":"mujer"
+   },
+   {
+    "id":"15",
+    "image":"../img/remera15.jpg",
+    "productName":"Remera Gris Puma ll",
+    "price":1600,
+    "talla":["S","M","L","XL"],
+    "cantidadVenta": 4,
+    "categoria":"remera",
+    "genero":"hombre"
+   },
+   {
+    "id":"16",
+    "image":"../img/remera16.jpg",
+    "productName":"Remera Topper Running",
+    "price":800,
+    "talla":["S","M","L","XL"],
+    "cantidadVenta": 4,
+    "categoria":"remera",
+    "genero":"hombre"
+   },
+   {
+    "id":"17",
+    "image":"../img/remera17.jpg",
+    "productName":"Remera Adidas Roja",
+    "price":1500,
+    "talla":["S","M","L","XL"],
+    "cantidadVenta": 4,
+    "categoria":"remera",
+    "genero":"hombre"
+   },
+   {
+    "id":"18",
+    "image":"../img/remera18.jpg",
+    "productName":"Remera Topper Basic",
+    "price":1000,
+    "talla":["S","M","L","XL"],
+    "cantidadVenta": 5,
+    "categoria":"remera",
+    "genero":"mujer"
+   },
+   {
+    "id":"19",
+    "image":"../img/remera19.jpg",
+    "productName":"Remera Topper ciclista",
+    "price":900,
+    "talla":["S","M","L","XL"],
+    "cantidadVenta": 3,
+    "categoria":"remera",
+    "genero":"mujer"
+   },
+   {
+    "id":"20",
+    "image":"../img/remera20.jpg",
+    "productName":"Remera Topper ciclista",
+    "price":900,
+    "talla":["S","M","L","XL"],
+    "cantidadVenta": 4,
+    "categoria":"remera",
+    "genero":"mujer"
+   },
+   {
+    "id":"21",
+    "image":"../img/remera21.jpg",
+    "productName":"Camiseta Fila",
+    "price":800,
+    "talla":["S","M","L","XL"],
+    "cantidadVenta": 3,
+    "categoria":"remera",
+    "genero":"mujer"
+   },
+   {
+    "id":"22",
+    "image":"../img/remera22.jpg",
+    "productName":"Remera Nike Rosa",
+    "price":1800,
+    "talla":["S","M","L","XL"],
+    "cantidadVenta": 5,
+    "categoria":"remera",
+    "genero":"mujer"
+   },
+   {
+    "id":"23",
+    "image":"../img/remera23.jpg",
+    "productName":"Remera Topper ",
+    "price":900,
+    "talla":["S","M","L","XL"],
+    "cantidadVenta": 5,
+    "categoria":"remera",
+    "genero":"mujer"
+   },
+   {
+    "id":"24",
+    "image":"../img/remera24.jpg",
+    "productName":"Remera River Plate",
+    "price":900,
+    "talla":["S","M","L","XL"],
+    "cantidadVenta": 4,
+    "categoria":"remera",
+    "genero":"mujer"
+   },
+   {
+    "id":"25",
+    "image":"../img/remera25.jpg",
+    "productName":"Remera Topper ciclista",
+    "price":900,
+    "talla":["S","M","L","XL"],
+    "cantidadVenta": 5,
+    "categoria":"remera",
+    "genero":"mujer"
+   },
+   {
+    "id":"26",
+    "image":"../img/remera26.jpg",
+    "productName":"Remera Topper Gris",
+    "price":900,
+    "talla":["S","M","L","XL"],
+    "cantidadVenta": 5,
+    "categoria":"remera",
+    "genero":"hombre"
+   },
+   {
+    "id":"27",
+    "image":"../img/short27.jpg",
+    "productName":"Short Nike Run",
+    "price":5000,
+    "talla":["S","M","L","XL"],
+    "cantidadVenta": 4,
+    "categoria":"short",
+    "genero":"hombre"
+   },
+   {
+    "id":"28",
+    "image":"../img/short28.jpg",
+    "productName":"Short frenchs Pack",
+    "price":4000,
+    "talla":["S","M","L","XL"],
+    "cantidadVenta": 3,
+    "categoria":"short",
+    "genero":"hombre"
+   },
+   {
+    "id":"29",
+    "image":"../img/short29.jpg",
+    "productName":"Short Adidas Pack",
+    "price":8000,
+    "talla":["S","M","L","XL"],
+    "cantidadVenta": 3,
+    "categoria":"short",
+    "genero":"hombre"
+   },
+   {
+    "id":"30",
+    "image":"../img/short30.jpg",
+    "productName":"Short Atletismo Running",
+    "price":8000,
+    "talla":["S","M","L","XL"],
+    "cantidadVenta": 4,
+    "categoria":"short",
+    "genero":"mujer"
+   },
+   {
+    "id":"31",
+    "image":"../img/short31.jpg",
+    "productName":"Short Tiro Alto",
+    "price":2000,
+    "talla":["S","M","L","XL"],
+    "cantidadVenta": 3,
+    "categoria":"short",
+    "genero":"mujer"
+   },
+   {
+    "id":"32",
+    "image":"../img/short32.jpg",
+    "productName":"Short Nike dry10",
+    "price":4999,
+    "talla":["S","M","L","XL"],
+    "cantidadVenta": 4,
+    "categoria":"short",
+    "genero":"mujer"
+   },
+   {
+    "id":"33",
+    "image":"../img/short32.jpg",
+    "productName":"Short Nike dry10",
+    "price":4999,
+    "talla":["S","M","L","XL"],
+    "cantidadVenta": 4,
+    "categoria":"short",
+    "genero":"mujer"
+   },
+   {
+    "id":"34",
+    "image":"../img/musculosa33.jpg",
+    "productName":"Musculosa Basic Pack",
+    "price":4999,
+    "talla":["S","M","L","XL"],
+    "cantidadVenta": 4,
+    "categoria":"musculosa",
+    "genero":"mujer"
+   },
+   {
+    "id":"35",
+    "image":"../img/musculosa34.jpg",
+    "productName":"Musculosa Reebok Rosa",
+    "price":3000,
+    "talla":["S","M","L","XL"],
+    "cantidadVenta": 4,
+    "categoria":"musculosa",
+    "genero":"mujer"
+   },
+   {
+    "id":"36",
+    "image":"../img/musculosa35.jpg",
+    "productName":"Musculosa Adidas ",
+    "price":6999,
+    "talla":["S","M","L","XL"],
+    "cantidadVenta": 4,
+    "categoria":"musculosa",
+    "genero":"mujer"
+   },
+   {
+    "id":"37",
+    "image":"../img/musculosa36.jpg",
+    "productName":"Musculosa X roja ",
+    "price":5999,
+    "talla":["S","M","L","XL"],
+    "cantidadVenta": 4,
+    "categoria":"musculosa",
+    "genero":"hombre"
+   },
+   {
+    "id":"38",
+    "image":"../img/musculosa37.jpg",
+    "productName":"Musculosa Topper Basic",
+    "price":3000,
+    "talla":["S","M","L","XL"],
+    "cantidadVenta": 3,
+    "categoria":"musculosa",
+    "genero":"hombre"
+   },
+   {
+    "id":"39",
+    "image":"../img/musculosa38.jpg",
+    "productName":"Musculosa Adidas Naranja ",
+    "price":7999,
+    "talla":["S","M","L","XL"],
+    "cantidadVenta": 4,
+    "categoria":"musculosa",
+    "genero":"hombre"
    }
-
+   
     ]
+

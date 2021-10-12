@@ -1,6 +1,6 @@
 
 
-    /* buscador sencillo de practica*/
+    /* buscador sencillo sobre el contenido de la pagina de practica*/
     
     const filtrar =(selector)=>{
         document.addEventListener("keyup",(e)=>{

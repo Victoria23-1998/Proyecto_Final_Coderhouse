@@ -3,11 +3,11 @@
 
 document.addEventListener("DOMContentLoaded",()=>{
     
-   renderCards()
+   renderCards("zapatilla","");
     eventosCard();
     eventosModal();
     numberItemsCar();
-    //numberItemsCar2();
+    eventFiltrado();
    
 })
 

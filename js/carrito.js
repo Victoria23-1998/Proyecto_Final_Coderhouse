@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", (e)=>{
    
   }
   
- 
+  
   
   
    contCartHtml.addEventListener("change",(e)=>{
@@ -145,11 +145,12 @@ document.addEventListener("DOMContentLoaded", (e)=>{
     let divSubtotal= document.querySelector("#subtotalCompra");
     let divTotal= document.querySelector("#totalCompra");
     total=subTotal;
-    divSubtotal.textContent= `$${subTotal}`;
-    divTotal.textContent= `$${total}`;
-
+    
+    divSubtotal.textContent= `${subTotal}`;
+    divTotal.textContent= ` ${total}`;
+    
   }
-  
+
   
    const eliminarItem=(id)=>{
 
@@ -196,3 +197,6 @@ contenedorCompra.addEventListener("click",(e)=>{
    }
 })
 
+const mostrarNumFormat= (valor) =>{
+  return new Intl.NumberFormat("es-AR", {style: "currency", currency: "ARS"}).format(valor);
+}
