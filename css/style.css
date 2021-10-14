@@ -10,7 +10,6 @@
   position: relative;
   bottom: 0 !important;
   padding-top: 30px;
-  overflow: hidden;
   margin-top: 40px; }
   .footerDestok a {
     text-decoration: none;
@@ -85,8 +84,15 @@ body {
 .page-wrap {
   min-height: 100vh; }
 
-body {
-  overflow-x: hidden !important; }
+.offcanvas-start {
+  width: 17%; }
+
+#btn-Filtrar {
+  width: 10%;
+  margin-left: 20px; }
+
+.modal-backdrop {
+  display: none; }
 
 .contenedorModal {
   background-color: rgba(0, 0, 0, 0.4); }
@@ -98,9 +104,6 @@ body {
 .alertTalla {
   display: none;
   padding: 0px; }
-
-.successCompra {
-  display: none; }
 
 .form-select:focus {
   outline: none;
@@ -128,18 +131,33 @@ body {
 ion-icon {
   font-size: 2rem; }
 
-.alert-success {
+/* filtrado*/
+.filter {
+  display: none; }
+
+#successCart {
+  display: none;
   transition: 0.5s;
-  width: 400px;
+  width: 30%;
   min-height: 50px;
   z-index: 10;
   position: absolute;
   text-align: center;
-  margin-left: 400px;
-  display: none; }
+  left: 0;
+  bottom: 0; }
 
-/* filtrado*/
-.filter {
+#successCompra {
+  display: none;
+  transition: 0.5s;
+  width: 30%;
+  min-height: 50px;
+  z-index: 10;
+  position: absolute;
+  text-align: center;
+  left: 0;
+  bottom: 0; }
+
+.modal-backdrop.show {
   display: none; }
 
 #miCar {
@@ -437,8 +455,7 @@ ion-icon {
 
 @media screen and (max-width: 758px) {
   body {
-    font-size: 1rem;
-    overflow-x: hidden; }
+    font-size: 1rem; }
   .navbar5 {
     display: block; }
   .logo {
@@ -565,10 +582,6 @@ ion-icon {
   .accordion-button {
     background-color: #222831;
     color: whitesmoke; }
-  .alert-success {
-    width: 250px;
-    height: 50px;
-    margin-left: 0px; }
   .d-flex {
     width: 65%;
     height: 25px; }
@@ -626,7 +639,17 @@ ion-icon {
     margin-left: auto;
     margin-right: auto; }
   #seccionTotal {
-    margin-bottom: 30px; } }
+    margin-bottom: 30px; }
+  #btn-Filtrar {
+    width: 20%;
+    margin-left: 2.7rem;
+    margin-top: 20px; }
+  #modalAgregado {
+    width: 50% !important; }
+  #successCart {
+    width: 50%; }
+  .offcanvas-start {
+    width: 45%; } }
 
 * {
   padding: 0;

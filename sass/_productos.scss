@@ -12,9 +12,7 @@
     display:none;
     padding: 0px;
 }
-.successCompra{
-    display:none;
-}
+
 .form-select:focus{
     outline: none;
   box-shadow: none;
@@ -46,18 +44,34 @@ ion-icon{
 }
 
 
-.alert-success{
-transition: 0.5s;
-width: 400px;
+
+
+/* filtrado*/
+.filter{
+    display: none;
+}
+#successCart{
+    display: none;
+    transition: 0.5s;
+width: 30%;
 min-height: 50px;
 z-index: 10;
 position:absolute;
  text-align: center;
- margin-left: 400px;
-display: none;
+ left: 0;
+ bottom: 0;
 }
-
-/* filtrado*/
-.filter{
+#successCompra{
+    display: none;
+    transition: 0.5s;
+width: 30%;
+min-height: 50px;
+z-index: 10;
+position:absolute;
+ text-align: center;
+ left: 0;
+ bottom: 0;
+}
+.modal-backdrop.show{
     display: none;
 }

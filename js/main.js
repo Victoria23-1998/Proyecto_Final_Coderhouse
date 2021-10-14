@@ -3,12 +3,12 @@
 
 document.addEventListener("DOMContentLoaded",()=>{
     
-   renderCards("zapatilla","");
+   renderCards([{categoria:'zapatilla'}]);
     eventosCard();
     eventosModal();
     numberItemsCar();
-    eventFiltrado();
-   
+    eventFiltrado()
+    
 })
 
 

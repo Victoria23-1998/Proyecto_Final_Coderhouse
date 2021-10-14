@@ -42,7 +42,7 @@
 @media screen and (max-width: 758px){
     body{
         font-size: 1rem;
-        overflow-x: hidden;
+        
     }
     
     .navbar5{
@@ -246,12 +246,7 @@
     background-color: $color1;
     color: whitesmoke;
 }
-.alert-success{
-    width:250px;
-    height: 50px;
-    margin-left: 0px;
-  
-}
+
 .d-flex{
        
     width: 65%;
@@ -338,5 +333,20 @@
 }
 #seccionTotal{
     margin-bottom: 30px;
+}
+#btn-Filtrar{
+    width: 20%;
+    margin-left: 2.7rem;
+    margin-top: 20px;
+}
+#modalAgregado{
+    width: 50% !important;
+}
+#successCart{
+    width: 50%;
+  
+}
+.offcanvas-start{
+    width: 45%;
 }
 }

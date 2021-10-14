@@ -184,18 +184,81 @@
 
 </header>
 <main>
- <!--<div class="alert alert-success successDestok" role="alert">
-   Agregado al carrito
- </div>-->
- 
- 
- <div class="alert alert-success" role="alert" id="successCart">
-  Agregado al carrito
-</div>
-   <div class="contenedor-cards" id="items"></div>
-   <div id="resultado"></div>
 
-   <div class="modal contenedorModal close-modal" tabindex="-1">
+  <div class="alert alert-success" role="alert" id="successCart" >
+    Agregado al carrito
+  </div>
+  
+ 
+  <a class="btn btn-dark" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"  id="btn-Filtrar">
+    Filtrar
+  </a>
+ 
+<div id="canvas">
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Filtrar por:</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+     
+      <select class="form-select" aria-label="Default select example" id="selectCategoria">
+        <option value="nada">Categoría</option>
+        <option selected value="zapatilla">Zapatillas</option>
+        <option value="remera">Remeras</option>
+        <option value="short">Shorts</option>
+        <option value="musculosa">Musculosa</option>
+        
+      </select>
+     
+      
+      <select class="form-select" aria-label="Default select example" id="selectGenero">
+        <option selected value="nada">Género</option>
+        <option value="hombre" >Hombre</option>
+        <option value="mujer" >Mujer</option>
+       
+      </select>
+     
+      <select class="form-select" aria-label="Default select example" id="selectMarca">
+        <option selected value="nada">Marca</option>
+        <option value="Topper">Topper</option>
+        <option value="Nike">Nike</option>
+        <option value="Adidas">Adidas</option>
+        <option value="Fila">Fila</option>
+        <option value="Reebok">Reebok</option>
+       
+      </select>
+     
+      <select class="form-select" aria-label="Default select example" id="selectColor">
+        <option selected value="nada">Color</option>
+        <option value="negro">Negro</option>
+        <option value="rojo">Rojo</option>
+        <option value="gris">Gris</option>
+        <option value="blanco">Blanco</option>
+        <option value="azul">Azul</option>
+        <option value="rosa">Rosa</option>
+        <option value="naranja">Naranja</option>
+      </select>
+     
+      
+      <select class="form-select" aria-label="Default select example" id="selectPrecio">
+        <option selected value="nada">Precio</option>
+        <option value="<=4000">hasta $4.000</option>
+        <option value="RG4000-7000">$4.000 a $7.000</option>
+        <option value=">=7000">mas de $7.000</option>
+      </select>
+
+      <button type="button" class="btn btn-dark aplicarFiltro" style="margin-top: 20px;">Aplicar Filtro</button>
+     
+     
+
+    </div>
+  </div>
+</div> 
+
+   <div class="contenedor-cards" id="items"></div>
+
+  <div class="modal contenedorModal close-modal" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -221,20 +284,21 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary close-modal" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary btn-Aceptar">Aceptar</button>
+         <button type="button" class="btn btn-primary btn-Aceptar">Aceptar</button>
+      
         </div>
       </div>
     </div>
   </div>
 
-  
+ 
 
 </main>
 
 
 
 <template id="template-card">
-   <div class="card cc" style="width: 18rem;">
+   <div class="card cc animate__animated animate__zoomIn" style="width: 18rem;">
       <div class="imagenCard">
        <img src="" class="card-img-top" alt="">
       </div>

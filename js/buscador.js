@@ -2,7 +2,7 @@
 
     /* buscador sencillo sobre el contenido de la pagina de practica*/
     
-    const filtrar =(selector)=>{
+    const filtrarBuscador =(selector)=>{
         document.addEventListener("keyup",(e)=>{
         
           if(e.target.matches("#search1")){

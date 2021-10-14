@@ -3,9 +3,10 @@ const selectBanco= document.querySelector("#banco");
 const selectTarjeta=document.querySelector("#tarjeta");
 const contentCuotas=document.querySelector("#cuotas");
 const selects=document.querySelectorAll(".form-select");
+
 const modalBody=document.querySelector(".modalCuota");
 const montoT= document.querySelector("#totalCompra");
-let  mensajeCuota;
+let  mensajeCuota=document.querySelector("#showCuotas");
 
 let cuotaSel='1';
 
@@ -51,11 +52,7 @@ const renderBancos =()=>{
             let bancoSel = e.target.value;
             renderTarjetayCuotas(bancoSel)
         }
-       if(e.target.matches("#cantCuotas")){
-          
-            cuotaSel= e.target.value;
-            calcular(cuotaSel);
-       }
+       
      })
      
 }
@@ -86,31 +83,39 @@ const renderTarjetayCuotas=(banco)=>{
     })
     
 }
-const calcular =(cantCuotas)=>{
-    
-    let Mtotal=montoT.textContent;
-  
-    let montoCuotas= Mtotal/cantCuotas;
-    
-    contentCuotas.addEventListener("click",(e)=>{
-        if(e.target.matches(".cuotas")){
-            selectBanco.style.display="block";
-            selectTarjeta.style.display="block";
-            selectCuotas.style.display="block";
-            mensajeCuota.style.display="none";
-        }
-        if(e.target.matches(".calculo")){
-            
-            selectBanco.style.display="none";
-            selectTarjeta.style.display="none";
-            selectCuotas.style.display="none";
+const calcular =(cantCuotas,montoTotal)=>{
 
-            mensajeCuota= document.createElement("h3");
-           
-            mensajeCuota.textContent= `En ${cantCuotas} cuotas pagarás : $ ${montoCuotas.toFixed(2)} `
-            modalBody.appendChild(mensajeCuota);
-        }
-    })
-   
+    let montoCuotas= montoTotal/cantCuotas;
+    return montoCuotas.toFixed(2);
+    
 }
 
+contentCuotas.addEventListener("click",(e)=>{
+    
+    if(e.target.matches(".cuotas")){
+       
+        selectBanco.style.display="block";
+        selectTarjeta.style.display="block";
+        selectCuotas.style.display="block";
+       
+    }
+    if(e.target.matches(".calculo")){
+       
+        let Mtotal=montoT.textContent;
+        let CantCuotas=selectCuotas.value;
+        selectBanco.style.display="none";
+        selectTarjeta.style.display="none";
+        selectCuotas.style.display="none";
+
+        mensajeCuota.textContent= `En ${CantCuotas} cuotas pagarás : $ ${ calcular(CantCuotas,Mtotal)} `
+        modalBody.appendChild(mensajeCuota);
+        
+    }
+    if(e.target.matches(".close")){
+        mensajeCuota.style.display="none";
+        
+        selectBanco.value="ninguno";
+        selectTarjeta.value="ninguno";
+        selectCuotas.value="ninguno";
+    }
+})

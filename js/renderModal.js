@@ -6,9 +6,10 @@ let animacionModal= document.querySelector(".modal-content");
 
 let tallaSel = null;
 let cantidadSel= '1';
-
+let modalComprar= document.querySelector("#modalAgregado");
 const contenedorModal = document.querySelector(".contenedorModal");
 const pintarModal= (producto) =>{
+  succeful.style.display="none";
   let nombre= document.getElementById("txtProduct");
   let precio= document.getElementById("txtPrice");
   let img=document.getElementById("imgProd");
@@ -88,11 +89,14 @@ const eventosModal =()=>{
       alert.style.display='none'
      }
     
-    AgregarProdCar(idProduct,tallaSel,cantidadSel)
-    numberItemsCar()
+    AgregarProdCar(idProduct,tallaSel,cantidadSel);
+    numberItemsCar();
     //numberItemsCar2();
-    cerrarBtnAceptar()
-    alertCarrito();
+    cerrarBtnAceptar();
+    
+    succeful.classList.add('animate__animated','animate__slideOutUp');
+    succeful.style.display="block"
+    
     
     
    }
@@ -120,12 +124,3 @@ const cerrarBtnAceptar=()=>{
   contenedorModal.style.display='none';
 }
 
-const alertCarrito=()=>{
- 
-  succeful.classList.add('animate__animated','animate__slideOutUp');
-  
- 
-  succeful.style.display="block";
-  //let quitar = setTimeout(quitarAlerta,3000);
- 
-}

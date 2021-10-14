@@ -5,22 +5,23 @@ const carritoVacio = document.querySelector('#carritoVacio');
 const templateCarrito = document.querySelector("#carrito").content;
 const fragmento2= document.createDocumentFragment();
 let contCartHtml= document.querySelector("#contenedorCart");
-const contenedorCarrito=document.querySelector("#contenedorCarrito")
+const contenedorCarrito=document.querySelector("#contenedorCarrito");
 const carritoLleno=document.querySelector("#miCar");
 let succeful = document.querySelector("#successCompra");
-let contenedorCompra= document.querySelector("#seccionTotal")
+
+let contenedorCompra= document.querySelector("#seccionTotal");
 let total=0;
-
-
+const modalCompra=document.querySelector("#modalComprar2");
 document.addEventListener("DOMContentLoaded", (e)=>{
  
   pintarCarrito();
+  
 })
 
 
 
   const pintarCarrito = async()=>{
-
+    
     let dataProducts= await getProducts();
     
     
@@ -190,12 +191,7 @@ const ocultarCarrito=()=>{
   carritoLleno.style.display="none";
 }
 
-contenedorCompra.addEventListener("click",(e)=>{
-  if(e.target.classList.contains("comprar")||e.target.classList.contains("comprar *")){
-    succeful.classList.add('animate__animated','animate__slideOutUp');
-    succeful.style.display="block";
-   }
-})
+
 
 const mostrarNumFormat= (valor) =>{
   return new Intl.NumberFormat("es-AR", {style: "currency", currency: "ARS"}).format(valor);
