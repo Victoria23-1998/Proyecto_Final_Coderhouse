@@ -349,4 +349,16 @@
 .offcanvas-start{
     width: 45%;
 }
+.footerMobile{
+    margin-top: 20px;
+    a{text-decoration: none;}
+
+    .conten4{
+        background-color: $color1;
+        color:white;
+        p{
+            margin-top: 0px;
+        }
+    }
+}
 }

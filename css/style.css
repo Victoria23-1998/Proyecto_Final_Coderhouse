@@ -649,7 +649,16 @@ ion-icon {
   #successCart {
     width: 50%; }
   .offcanvas-start {
-    width: 45%; } }
+    width: 45%; }
+  .footerMobile {
+    margin-top: 20px; }
+    .footerMobile a {
+      text-decoration: none; }
+    .footerMobile .conten4 {
+      background-color: #222831;
+      color: white; }
+      .footerMobile .conten4 p {
+        margin-top: 0px; } }
 
 * {
   padding: 0;

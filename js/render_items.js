@@ -24,77 +24,20 @@ const renderCards =async (filtros) =>{
     case 1:
       
       showProducts = dataProducts.filter(product => {
-        if(String(Object.keys(filtros[0])) == 'price'){
-         
-          if(String(Object.values(filtros[0])).substring(0,2) === '<='){
-           return product[Object.keys(filtros[0])] <= String(Object.values(filtros[0])).slice(2);
-           }else if(String(Object.values(filtros[0])).substring(0,2) === '>='){
-            return product[Object.keys(filtros[0])] >= String(Object.values(filtros[0])).slice(2);
-           }else if(String(Object.values(filtros[0])).substring(0,2) === 'RG'){
-            let rangos= String(Object.values(filtros[0])).slice(2).split("-");
-            return product[Object.keys(filtros[0])] >=rangos[0] &&  product[Object.keys(filtros[0])] <= rangos[1]
-           }
-          
-        }else{
-         return product[Object.keys(filtros[0])] == Object.values(filtros[0])
-        }
-        
+        return product[Object.keys(filtros[0])] == Object.values(filtros[0])
       }) 
       break;
     case 2:
-      if(String(Object.keys(filtros[1])) == 'price'){
-        showProducts = dataProducts.filter(product =>{
-          return product[Object.keys(filtros[0])] == Object.values(filtros[0]) 
-        });
-        console.log(showProducts)
-        let showProductPrice = showProducts.filter(product =>{
-          if(String(Object.values(filtros[1])).substring(0,2) === '<='){
-            return product[Object.keys(filtros[1])] <= String(Object.values(filtros[1])).slice(2);
-            }else if(String(Object.values(filtros[1])).substring(0,2) === '>='){
-             return product[Object.keys(filtros[1])] >= String(Object.values(filtros[1])).slice(2);
-            }else if(String(Object.values(filtros[1])).substring(0,2) === 'RG'){
-             let rangos= String(Object.values(filtros[1])).slice(2).split("-");
-             return product[Object.keys(filtros[1])] >=rangos[0] &&  product[Object.keys(filtros[1])] <= rangos[1]
-            }
-           
-        });
-        showProducts = showProductPrice;
-      }else{
-        showProducts = dataProducts.filter(product =>{
-          return product[Object.keys(filtros[0])] == Object.values(filtros[0]) &&  
-        product[Object.keys(filtros[1])] == Object.values(filtros[1])
-        });
-        
-      }
-
       
-
-
-      
-     /* showProducts = dataProducts.filter(product => {
-        if(String(Object.keys(filtros[1])) !== 'price'){
-          return product[Object.keys(filtros[0])] == Object.values(filtros[0])  &&  product[Object.keys(filtros[1])] == Object.values(filtros[1])
-        }
-        if(String(Object.keys(filtros[1])) !== 'price'){
-         
-          if(String(Object.values(filtros[1])).substring(0,2) === '<='){
-           return product[Object.keys(filtros[1])] <= String(Object.values(filtros[0])).slice(2);
-           }else if(String(Object.values(filtros[1])).substring(0,2) === '>='){
-            return product[Object.keys(filtros[1])] >= String(Object.values(filtros[0])).slice(2);
-           }else if(String(Object.values(filtros[1])).substring(0,2) === 'RG'){
-            let rangos= String(Object.values(filtros[1])).slice(2).split("-");
-            return product[Object.keys(filtros[1])] >=rangos[0] &&  product[Object.keys(filtros[1])] <= rangos[1]
-           }
+        showProducts = dataProducts.filter(product =>{
           
-        }else{
-          return product[Object.keys(filtros[0])] == Object.values(filtros[0]) &&  product[Object.keys(filtros[1])] == Object.values(filtros[1])
-        
-       
-      }); */
+            return product[Object.keys(filtros[0])] == Object.values(filtros[0]) &&  
+           product[Object.keys(filtros[1])] == Object.values(filtros[1])
+        });
+      
       break;
-
-      case 3:
-     console.log(Object.values(filtros[0]))
+    case 3:
+    
       showProducts = dataProducts.filter(product => {
        return product[Object.keys(filtros[0])] == Object.values(filtros[0]) && 
       product[Object.keys(filtros[1])] == Object.values(filtros[1])&&
@@ -103,7 +46,7 @@ const renderCards =async (filtros) =>{
         
       }); 
       break;
-      case 4:
+    case 4:
       
          showProducts = dataProducts.filter(product => {
           return product[Object.keys(filtros[0])] == Object.values(filtros[0]) && 
