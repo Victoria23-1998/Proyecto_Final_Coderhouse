@@ -27,9 +27,9 @@
           <span class="number2">5</span>
         </a>
       </div>
-      <form class="d-flex" id="formSearch">
-        <input class="form-control me-2 " id="search1" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success " id="btnSearch2" type="submit">Search</button>
+      <form class="d-flex" id="formSearch2">
+        <input class="form-control me-2 " id="input2" type="search" placeholder="Buscar Producto" aria-label="Search">
+        <button class="btn btn-outline-success  btnSearch" id="btnSearch2"type="submit">Search</button>
       </form>
       <button class="nav-toggle" type="button">
         <i class="fas fa-bars"></i>
@@ -83,9 +83,9 @@
     <div class="logo2">
       <img src="./img/logo.png" alt="">
     </div>
-    <form class="d-flex" id="formSearch2">
-      <input class="form-control me-2" id="search1" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success" id="btnSearch1" type="submit">Search</button>
+    <form class="d-flex" id="formSearch">
+      <input class="form-control me-2" id="input1"  type="search" placeholder="Buscar Productos, Marcas, etc" aria-label="Search">
+      <button class="btn btn-outline-success btnSearch1" id="btnSearch1" type="submit">Search</button>
     </form>
   </nav>
 <div id="navbar2">
@@ -133,16 +133,14 @@
              Marcas
            </a>
            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-             <li><a class="dropdown-item" href="./pag/paginaError.html">Adidas</a></li>
-             <li><a class="dropdown-item" href="./pag/paginaError.html">Fila</a></li>
-             <li><a class="dropdown-item" href="./pag/paginaError.html">Puma</a></li>
-             <li><a class="dropdown-item" href="./pag/paginaError.html">Nike</a></li>
-             <li><a class="dropdown-item" href="./pag/paginaError.html">Vans</a></li>
-             <li><a class="dropdown-item" href="./pag/paginaError.html">Converse</a></li>
-             <li><a class="dropdown-item" href="./pag/paginaError.html">Reebok</a></li>
-             <li><a class="dropdown-item" href="./pag/paginaError.html">Otras Marcas</a></li>
-           
-           </ul>
+             <li><a class="dropdown-item adidas" href="#">Adidas</a></li>
+             <li><a class="dropdown-item fila" href="#">Fila</a></li>
+             <li><a class="dropdown-item puma" href="#">Puma</a></li>
+             <li><a class="dropdown-item nike" href="#">Nike</a></li>
+             <li><a class="dropdown-item vans" href="#">Vans</a></li>
+             <li><a class="dropdown-item converse" href="#">Converse</a></li>
+             <li><a class="dropdown-item reebok" href="#">Reebok</a></li>
+            </ul>
          </li>
          <li class="nav-item">
            <a class="nav-link" href="#">Sale</a>
@@ -239,19 +237,8 @@
         <option value="rosa">Rosa</option>
         <option value="naranja">Naranja</option>
       </select>
+     <button type="button" class="btn btn-dark aplicarFiltro" style="margin-top: 20px;">Aplicar Filtro</button>
      
-      
-      <select class="form-select" aria-label="Default select example" id="selectPrecio">
-        <option selected value="nada">Precio</option>
-        <option value="<=4000">hasta $4.000</option>
-        <option value="RG4000-7000">$4.000 a $7.000</option>
-        <option value=">=7000">mas de $7.000</option>
-      </select>
-
-      <button type="button" class="btn btn-dark aplicarFiltro" style="margin-top: 20px;">Aplicar Filtro</button>
-     
-     
-
     </div>
   </div>
 </div> 

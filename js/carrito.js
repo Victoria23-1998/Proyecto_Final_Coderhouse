@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", (e)=>{
     
 
     numberItemsCar();
-    //numberItemsCar2();
+    
     contCartHtml.querySelectorAll('*').forEach(n => n.remove());
 
     ocultarCarritoVacio();
@@ -153,29 +153,24 @@ document.addEventListener("DOMContentLoaded", (e)=>{
   }
 
   
-   const eliminarItem=(id)=>{
+const eliminarItem = (id) => {
 
-    let dataCarrito = getShoppingCart();
-    let nuevoCarrito = dataCarrito.filter(producto => producto.id !== id);
-    
-    guardarCart(nuevoCarrito);
-    if(nuevoCarrito.length == 0){
-      mostrarCartVacio();
-      ocultarCarrito();
-      
-    }else{
-      pintarCarrito();
-    }
-   
-   
+  let dataCarrito = getShoppingCart();
+  let nuevoCarrito = dataCarrito.filter(producto => producto.id !== id);
 
-   }
+  guardarCart(nuevoCarrito);
+  if (nuevoCarrito.length == 0) {
+    mostrarCartVacio();
+    ocultarCarrito();
+    numberItemsCar();
+  } else {
+    pintarCarrito();
+  }
+}
 
 const ocultarCarritoVacio=()=>{
     carritoVacio.style.display="none";
     numberItemsCar();
-    //numberItemsCar2();
-    
     
 }
 

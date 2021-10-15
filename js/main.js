@@ -1,14 +1,14 @@
 
 
 
-document.addEventListener("DOMContentLoaded",()=>{
-    
-   renderCards([{categoria:'zapatilla'}]);
+document.addEventListener("DOMContentLoaded",async()=>{
+    let productosEncontrados =await filtroMultiple([{ categoria: 'zapatilla' }]);
+    renderCards(productosEncontrados);
     eventosCard();
     eventosModal();
     numberItemsCar();
-    eventFiltrado()
     
+
 })
 
 

@@ -69,6 +69,8 @@ const cambioOpcion = (e)=>{
   cantidadSel= e.target.value;
   //console.log(cantidadSel)
  }
+
+ 
 const eventosModal =()=>{
   contenedorModal.addEventListener("click",(e)=>{
     if(e.target.classList.contains('close-modal')||e.target.classList.contains('close-modal *')){

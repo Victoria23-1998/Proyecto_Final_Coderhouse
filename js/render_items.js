@@ -3,130 +3,124 @@ const d = document;
 const items= d.getElementById("items");
 //uso fragment y templates como buena practica para tener mejor rendimiento
 const Fragmento1 = d.createDocumentFragment();
-const templateCards= document.getElementById("template-card").content;
-const inputSearch = document.querySelector("#search1");
-const menuNav= document.querySelector("#menuNav");
-const contentFiltros= document.querySelector("#canvas");
-const selectGenero=document.querySelector("#selectGenero");
-const selectCategoria=document.querySelector("#selectCategoria");
-const selectMarca=document.querySelector("#selectMarca");
-const selectColor=document.querySelector("#selectColor");
-const selectPrecio=document.querySelector("#selectPrecio");
+const templateCards= d.getElementById("template-card").content;
+const menuNav= d.querySelector("#menuNav");
+const contentFiltros= d.querySelector("#canvas");
+const selectGenero=d.querySelector("#selectGenero");
+const selectCategoria=d.querySelector("#selectCategoria");
+const selectMarca=d.querySelector("#selectMarca");
+const selectColor=d.querySelector("#selectColor");
 
-const renderCards =async (filtros) =>{
-  
-  let dataProducts= await getProducts();
+const filtroBuscador = async (busqueda) => {
+  let dataProducts = await getProducts();
+  // showProducts es el resultado de los productos filtrados
+  let showProducts = dataProducts.filter(product => {
+    let nombres = product.productName.toLowerCase();
+    let nombre;
+    if (nombres.indexOf(busqueda) !== -1) {
+      nombre = nombres
+    }
+    return nombre
+  })
+  return showProducts
+}
+
+const filtroMultiple = async (filtros) => {
+  let dataProducts = await getProducts();
   // showProducts es el resultado de los productos filtrados
   let showProducts;
-
   //filtrado dinámico de productos
   switch (filtros.length) {
     case 1:
-      
-      showProducts = dataProducts.filter(product => {
+       showProducts = dataProducts.filter(product => {
         return product[Object.keys(filtros[0])] == Object.values(filtros[0])
-      }) 
-      break;
+      })
+    break;
     case 2:
-      
-        showProducts = dataProducts.filter(product =>{
-          
-            return product[Object.keys(filtros[0])] == Object.values(filtros[0]) &&  
-           product[Object.keys(filtros[1])] == Object.values(filtros[1])
-        });
-      
+      showProducts = dataProducts.filter(product => {
+          return product[Object.keys(filtros[0])] == Object.values(filtros[0]) &&
+          product[Object.keys(filtros[1])] == Object.values(filtros[1])
+      });
+
       break;
     case 3:
-    
       showProducts = dataProducts.filter(product => {
-       return product[Object.keys(filtros[0])] == Object.values(filtros[0]) && 
-      product[Object.keys(filtros[1])] == Object.values(filtros[1])&&
-      product[Object.keys(filtros[2])] == Object.values(filtros[2])
-       
-        
-      }); 
+        return product[Object.keys(filtros[0])] == Object.values(filtros[0]) &&
+          product[Object.keys(filtros[1])] == Object.values(filtros[1]) &&
+          product[Object.keys(filtros[2])] == Object.values(filtros[2])
+      });
       break;
     case 4:
-      
-         showProducts = dataProducts.filter(product => {
-          return product[Object.keys(filtros[0])] == Object.values(filtros[0]) && 
-         product[Object.keys(filtros[1])] == Object.values(filtros[1])&&
-         product[Object.keys(filtros[2])] == Object.values(filtros[2]) &&
-         product[Object.keys(filtros[3])] == Object.values(filtros[3])
-          
-           
-      }); 
+      showProducts = dataProducts.filter(product => {
+        return product[Object.keys(filtros[0])] == Object.values(filtros[0]) &&
+          product[Object.keys(filtros[1])] == Object.values(filtros[1]) &&
+          product[Object.keys(filtros[2])] == Object.values(filtros[2]) &&
+          product[Object.keys(filtros[3])] == Object.values(filtros[3])
+      });
       break;
-      case 4:
-        console.log(Object.values(filtros[0]))
-         showProducts = dataProducts.filter(product => {
-          return product[Object.keys(filtros[0])] == Object.values(filtros[0]) && 
-         product[Object.keys(filtros[1])] == Object.values(filtros[1])&&
-         product[Object.keys(filtros[2])] == Object.values(filtros[2]) &&
-         product[Object.keys(filtros[3])] == Object.values(filtros[3])&&
-         product[Object.keys(filtros[4])] == Object.values(filtros[4])
-          
-           
-      }); 
+    case 4:
+      showProducts = dataProducts.filter(product => {
+        return product[Object.keys(filtros[0])] == Object.values(filtros[0]) &&
+          product[Object.keys(filtros[1])] == Object.values(filtros[1]) &&
+          product[Object.keys(filtros[2])] == Object.values(filtros[2]) &&
+          product[Object.keys(filtros[3])] == Object.values(filtros[3]) &&
+          product[Object.keys(filtros[4])] == Object.values(filtros[4])
+      });
       break;
   }
+  return showProducts
+}
 
+const renderCards = (showProducts) => {
 
   if (showProducts.length > 0) {
-    
+
     items.querySelectorAll('*').forEach(n => n.remove());
 
     showProducts.forEach(product => {
-      
+
       templateCards.querySelector("img").setAttribute("src", product.image);
       templateCards.querySelector("h3").textContent = product.productName;
       templateCards.querySelector("p").textContent = mostrarNumFormat(product.price);
       templateCards.querySelector("ion-icon").setAttribute("id", product.id);
       templateCards.querySelector('.btnz').setAttribute("id", product.id);
-      
+
       // se hace un clone para poder utilizar el template mas de una vez
-      
+
       let clone = templateCards.cloneNode(true)
       Fragmento1.appendChild(clone)
-      
+
     })
-    
+
     items.appendChild(Fragmento1)
-    let cards = items.querySelectorAll(".cc")
-    filtrarBuscador(cards);
-    
+
+
   } else {
     window.alert("No se encontro el producto")
   }
-   
-  
-  
-    
+
 }
 
-const eventosCard=async ()=>{
-  let dataProducts= await getProducts();
-  items.addEventListener("click", (e) =>{
+const eventosCard = async () => {
+  let dataProducts = await getProducts();
+  items.addEventListener("click", (e) => {
     e.stopPropagation()
-  if(e.target.classList.contains('btn-zoom')){
-   
-    let productoId= e.target.getAttribute("id");
-    //console.log(productoId)
-   
-    const producto=  dataProducts.find(el => el.id == productoId);
-    //console.log(producto);
-    abriModal()
-    pintarModal(producto);
-    succeful.classList.add("modalFilter");
-    
-  }
-})
+    if (e.target.classList.contains('btn-zoom')) {
+
+      let productoId = e.target.getAttribute("id");
+      const producto = dataProducts.find(el => el.id == productoId);
+      abriModal()
+      pintarModal(producto);
+      succeful.classList.add("modalFilter");
+
+    }
+  })
 }
 
 
 const armarFiltro=()=>{
-  let arrayFiltros=[];
   
+  let arrayFiltros=[];
   if(selectCategoria.value !== "nada"){
     arrayFiltros.push({categoria:selectCategoria.value})
   }
@@ -139,105 +133,101 @@ const armarFiltro=()=>{
   if(selectColor.value !== "nada"){
     arrayFiltros.push({color:selectColor.value})
   }
-  if(selectPrecio.value !== "nada"){
-    arrayFiltros.push({price:selectPrecio.value})
-  }
-  
+ 
   return arrayFiltros;
 }
 
 
-const eventFiltrado=()=>{
-  menuNav.addEventListener("click",(e)=>{
-    if(e.target.classList.contains('zapatillasH')){
+
+  
+  menuNav.addEventListener("click",async(e) => {
+
+    let productosEncontrados;
+    if (e.target.classList.contains('zapatillasH')) {
+      
+      productosEncontrados=await filtroMultiple([{ categoria: 'zapatilla'},{genero:'hombre'}]);
+      console.log(productosEncontrados)
       items.querySelectorAll('*').forEach(n => n.remove());
-      renderCards([{categoria:"zapatilla"},{genero:"hombre"}]);
+      renderCards(productosEncontrados);
     }
-    if(e.target.classList.contains('zapatillasM')){
+    if (e.target.classList.contains('zapatillasM')) {
       
-      
-      renderCards("categoria","zapatilla","mujer");
+      productosEncontrados=await filtroMultiple([{ categoria: 'zapatilla'}, {genero:'mujer'}])
+      renderCards(productosEncontrados);
     }
-    if(e.target.classList.contains('remerasMujer')){
-      
-      renderCards("categoria","remera","mujer");
-      
+    if (e.target.classList.contains('remerasMujer')) {
+      productosEncontrados=await filtroMultiple([{ categoria: 'remera'}, {genero:'mujer'}])
+      renderCards(productosEncontrados);
+
     }
-    if(e.target.classList.contains('remerasH')){
-     
-      renderCards("categoria","remera","hombre");
-    }
-    
-    if(e.target.classList.contains('zapatillasTodas')){
-     
-      renderCards("categoria","zapatilla","");
-    }
-    if(e.target.classList.contains('shortH')){
-      
-      renderCards("categoria","short","hombre");
-    }
-    if(e.target.classList.contains('shortM')){
-      items.querySelectorAll('*').forEach(n => n.remove());
-      renderCards("categoria","short","mujer");
-    }
-    if(e.target.classList.contains('musculosaM')){
-      
-      renderCards("categoria","musculosa","mujer");
-    }
-    if(e.target.classList.contains('musculosaH')){
-      
-      renderCards("categoria","musculosa","hombre");
+    if (e.target.classList.contains('remerasH')) {
+      productosEncontrados=await filtroMultiple([{ categoria: 'remera'}, {genero:'hombre'}])
+      renderCards(productosEncontrados);
     }
 
-  })
-  
-  contentFiltros.addEventListener("click",(e)=>{
-    
-    if(e.target.matches(".aplicarFiltro")){
-      renderCards(armarFiltro());
-      /*let valorCategoria=selectCategoria.value;
-      let valorGenero= selectGenero.value;
-      let valorMarca= selectMarca.value;
-      let valorColor= selectColor.value;
-      let valorPrecio= selectPrecio.value;
-      //
-      if(valorCategoria == "nada"){
-        renderCards("categoria","zapatilla",valorGenero);
-      }else{
-        renderCards("categoria",valorCategoria,valorGenero);
-      };
-
-      if(valorGenero == "nada"){
-        renderCards("categoria",valorCategoria,"nada");
-      }else{
-        renderCards("categoria",valorCategoria,valorGenero);
-      };
-      if(valorMarca == "nada"){
-        renderCards("categoria",valorCategoria,valorGenero);
-      }else{
-        renderCards("marca",valorMarca,valorGenero);
-      };
-      if(valorColor == "nada"){
-        renderCards("categoria",valorCategoria,valorGenero);
-      }else{
-        renderCards("color",valorColor,valorGenero);
-      };*/
-      
-     
-      
-  }
-  /*if(e.target.matches(".aplicarGenero")){
-    let valorCategoria=selectCategoria.value;
-      let valorGenero= selectGenero.value;
-    if(valorCategoria == "nada"){
-      renderCards("categoria","zapatilla",valorGenero);
-    }else{
-      renderCards("categoria",valorCategoria,valorGenero);
+    if (e.target.classList.contains('zapatillasTodas')) {
+      productosEncontrados=await filtroMultiple([{ categoria: 'remera'}])
+      renderCards(productosEncontrados);
     }
-  }*/
-  
-  })
+    if (e.target.classList.contains('shortH')) {
+      productosEncontrados=await filtroMultiple([{ categoria: 'short'}, {genero:'hombre'}])
+      renderCards(productosEncontrados);
+    }
+    if (e.target.classList.contains('shortM')) {
+      productosEncontrados=await filtroMultiple([{ categoria: 'short'},{ genero:'mujer'}])
+      items.querySelectorAll('*').forEach(n => n.remove());
+      renderCards(productosEncontrados);
+    }
+    if (e.target.classList.contains('musculosaM')) {
+      productosEncontrados=await filtroMultiple([{ categoria: 'musculosa'},{ genero:'mujer'}])
+      renderCards(productosEncontrados);
+    }
+    if (e.target.classList.contains('musculosaH')) {
+      productosEncontrados=await filtroMultiple([{ categoria: 'musculosa'}, {genero:'hombre'}])
+      renderCards(productosEncontrados);
+    }
+    if(e.target.matches('.adidas')){
+      productosEncontrados=await filtroMultiple([{ marca:'adidas'}])
+      renderCards(productosEncontrados);
+    }
+    if(e.target.matches('.fila')){
+      productosEncontrados=await filtroMultiple([{ marca:'fila'}])
+      renderCards(productosEncontrados);
+    }
+    if(e.target.matches('.puma')){
+      productosEncontrados=await filtroMultiple([{ marca:'puma'}])
+      renderCards(productosEncontrados);
+    }
+    if(e.target.matches('.nike')){
+      productosEncontrados=await filtroMultiple([{ marca:'nike'}])
+      renderCards(productosEncontrados);
+    }
+    if(e.target.matches('.vans')){
+      productosEncontrados=await filtroMultiple([{ marca:'vans'}])
+      renderCards(productosEncontrados);
+    }
+    if(e.target.matches('.converse')){
+      productosEncontrados=await filtroMultiple([{ marca:'converse'}])
+      renderCards(productosEncontrados);
+    }
+    if(e.target.matches('.reebok')){
+      productosEncontrados=await filtroMultiple([{ marca:'reebok'}])
+      renderCards(productosEncontrados);
+    }
+
+})
+
+contentFiltros.addEventListener("click",async(e)=>{
+    
+  if(e.target.matches(".aplicarFiltro")){
+    let arrayFiltros=armarFiltro();
+    let productosEncontrados= await filtroMultiple(arrayFiltros);
+    renderCards(productosEncontrados);
+    
 }
+
+
+})
 //funcion para convertir numeros a pesos Argentinos
 const mostrarNumFormat= (valor) =>{
     return new Intl.NumberFormat("es-AR", {style: "currency", currency: "ARS"}).format(valor);
