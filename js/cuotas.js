@@ -91,31 +91,19 @@ const calcular =(cantCuotas,montoTotal)=>{
 }
 
 contentCuotas.addEventListener("click",(e)=>{
-    
-    if(e.target.matches(".cuotas")){
-       
-        selectBanco.style.display="block";
-        selectTarjeta.style.display="block";
-        selectCuotas.style.display="block";
-       
-    }
+   
     if(e.target.matches(".calculo")){
-       
+      
         let Mtotal=montoT.textContent;
         let CantCuotas=selectCuotas.value;
-        selectBanco.style.display="none";
-        selectTarjeta.style.display="none";
-        selectCuotas.style.display="none";
-
+        
         mensajeCuota.textContent= `En ${CantCuotas} cuotas pagarás : $ ${ calcular(CantCuotas,Mtotal)} `
         modalBody.appendChild(mensajeCuota);
+      
         
     }
-    if(e.target.matches(".close")){
-        mensajeCuota.style.display="none";
-        
-        selectBanco.value="ninguno";
-        selectTarjeta.value="ninguno";
-        selectCuotas.value="ninguno";
-    }
+   if(e.target.matches('.close')){
+    mensajeCuota.textContent=""
+ 
+   }
 })
