@@ -16,11 +16,11 @@ const filtroBuscador = async (busqueda) => {
   // showProducts es el resultado de los productos filtrados
   let showProducts = dataProducts.filter(product => {
     let nombres = product.productName.toLowerCase();
-    let nombre;
+    let nombreEncontrado;
     if (nombres.indexOf(busqueda) !== -1) {
-      nombre = nombres
+      nombreEncontrado = nombres
     }
-    return nombre
+    return nombreEncontrado
   })
   return showProducts
 }

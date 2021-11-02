@@ -37,7 +37,7 @@ const bancos = [
 
 
 const renderBancos =()=>{
-    selectBanco.style.display="block";
+   
     bancos.forEach(element => {
         
         let option = document.createElement("option");

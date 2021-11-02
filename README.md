@@ -1,3 +1,5 @@
 #Proyecto Final JavaScript 💻
-Tienda de zapatillas hecho con HTML/CSS/JS
-https://productosvic.netlify.app/
+Tienda de productos hecho con HTML/CSS/JS
+Ver la app funcionadno aquí: https://productosvic.netlify.app/
+
+![ScreenShot](/img/pag.jpg)
